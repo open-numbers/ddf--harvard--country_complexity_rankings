@@ -1,0 +1,8 @@
+concept,concept_type,domain,name
+sitc_eci,measure,,ECI (SITC)
+growth_proj,measure,,International growth projections
+eci_ranking,measure,,Product Complexity Rankings
+country,entity_domain,,Country
+year,time,,Year
+name,string,,Name
+domain,string,,Domain

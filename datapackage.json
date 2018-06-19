@@ -1,14 +1,190 @@
 {
     "name": "ddf--harvard--country_complexity_rankings",
-    "author": "Gapminder",
-    "description": "Harvard Country Complexity Rankings",
     "language": {
         "name": "English",
         "id": "en"
     },
-    "translations": [],
+    "author": "Gapminder",
+    "description": "Harvard Country Complexity Rankings",
     "license": "CC-BY-4.0",
     "title": "Harvard Country Complexity Rankings",
+    "translations": [],
     "version": "0.0.1",
-    "resources": []
+    "created": "2018-06-19T08:13:42.063908+00:00",
+    "resources": [
+        {
+            "path": "ddf--concepts.csv",
+            "name": "ddf--concepts",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "concept"
+                    },
+                    {
+                        "name": "concept_type"
+                    },
+                    {
+                        "name": "domain"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "concept"
+            }
+        },
+        {
+            "path": "ddf--datapoints--eci_ranking--by--country--year.csv",
+            "name": "ddf--datapoints--eci_ranking--by--country--year",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "eci_ranking"
+                    }
+                ],
+                "primaryKey": [
+                    "country",
+                    "year"
+                ]
+            }
+        },
+        {
+            "path": "ddf--datapoints--growth_proj--by--country--year.csv",
+            "name": "ddf--datapoints--growth_proj--by--country--year",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "growth_proj"
+                    }
+                ],
+                "primaryKey": [
+                    "country",
+                    "year"
+                ]
+            }
+        },
+        {
+            "path": "ddf--datapoints--sitc_eci--by--country--year.csv",
+            "name": "ddf--datapoints--sitc_eci--by--country--year",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "sitc_eci"
+                    }
+                ],
+                "primaryKey": [
+                    "country",
+                    "year"
+                ]
+            }
+        },
+        {
+            "path": "ddf--entities--country.csv",
+            "name": "ddf--entities--country",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "country"
+            }
+        }
+    ],
+    "ddfSchema": {
+        "concepts": [
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "concept_type",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "domain",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            }
+        ],
+        "entities": [
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--country"
+                ]
+            }
+        ],
+        "datapoints": [
+            {
+                "primaryKey": [
+                    "country",
+                    "year"
+                ],
+                "value": "eci_ranking",
+                "resources": [
+                    "ddf--datapoints--eci_ranking--by--country--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "year"
+                ],
+                "value": "growth_proj",
+                "resources": [
+                    "ddf--datapoints--growth_proj--by--country--year"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "year"
+                ],
+                "value": "sitc_eci",
+                "resources": [
+                    "ddf--datapoints--sitc_eci--by--country--year"
+                ]
+            }
+        ],
+        "synonyms": []
+    }
 }
