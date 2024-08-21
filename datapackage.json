@@ -4,17 +4,17 @@
         "name": "English",
         "id": "en"
     },
-    "author": "Gapminder",
-    "created": "2018-06-20T01:29:03.992498+00:00",
-    "description": "Harvard Country Complexity Rankings",
-    "license": "CC-BY-4.0",
     "title": "Harvard Country Complexity Rankings",
+    "description": "Harvard Country Complexity Rankings",
+    "author": "Gapminder",
+    "license": "CC-BY-4.0",
+    "created": "2024-08-21T02:32:45.738668+00:00",
     "translations": [],
     "version": "0.0.1",
     "resources": [
         {
-            "path": "ddf--concepts.csv",
             "name": "ddf--concepts",
+            "path": "ddf--concepts.csv",
             "schema": {
                 "fields": [
                     {
@@ -30,12 +30,14 @@
                         "name": "name"
                     }
                 ],
-                "primaryKey": "concept"
+                "primaryKey": [
+                    "concept"
+                ]
             }
         },
         {
-            "path": "ddf--datapoints--eci_ranking--by--country--year.csv",
             "name": "ddf--datapoints--eci_ranking--by--country--year",
+            "path": "ddf--datapoints--eci_ranking--by--country--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -55,8 +57,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--growth_proj--by--country--year.csv",
             "name": "ddf--datapoints--growth_proj--by--country--year",
+            "path": "ddf--datapoints--growth_proj--by--country--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -76,8 +78,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--sitc_eci--by--country--year.csv",
             "name": "ddf--datapoints--sitc_eci--by--country--year",
+            "path": "ddf--datapoints--sitc_eci--by--country--year.csv",
             "schema": {
                 "fields": [
                     {
@@ -97,8 +99,8 @@
             }
         },
         {
-            "path": "ddf--entities--country.csv",
             "name": "ddf--entities--country",
+            "path": "ddf--entities--country.csv",
             "schema": {
                 "fields": [
                     {
@@ -108,7 +110,9 @@
                         "name": "name"
                     }
                 ],
-                "primaryKey": "country"
+                "primaryKey": [
+                    "country"
+                ]
             }
         }
     ],
